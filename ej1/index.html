@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			body {
+				margin: 0;
+				overflow: none;
+			}
+			canvas {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas></canvas>
+
+		<script>
+			// Obtener el contexto del canvas
+			const canvas = document.querySelector('canvas')
+			const ctx = canvas.getContext('2d')
+
+			// Redimensionar el canvas
+			canvas.width = innerWidth
+			canvas.height = innerHeight
+
+            // Cara
+            ctx.beginPath();
+            ctx.arc(150, 150, 100, 0, Math.PI * 2); // Círculo externo 
+            ctx.moveTo(220, 150); 
+            ctx.arc(150, 150, 70, 0, Math.PI); // Boca (en el sentido de las agujas del reloj) 
+            ctx.moveTo(130, 130); 
+            ctx.arc(120, 130, 10, 0, Math.PI * 2); // Ojo izquierdo 
+            ctx.moveTo(190, 130); 
+            ctx.arc(180, 130, 10, 0, Math.PI * 2); // Ojo derecho 
+            ctx.stroke();
+			ctx.closePath()
+		</script>
+	</body>
+</html>

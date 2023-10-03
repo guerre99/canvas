@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			body {
+				margin: 0;
+				overflow: none;
+			}
+			canvas {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas></canvas>
+
+		<script>
+			// Obtener el contexto del canvas
+			const canvas = document.querySelector('canvas')
+			const ctx = canvas.getContext('2d')
+
+			// Redimensionar el canvas
+			canvas.width = innerWidth
+			canvas.height = innerHeight
+
+            // Cuadrado 1
+            
+			let x1 = 100
+			let x2 = 360
+			let y1 = 100
+			let y2 = 300
+
+            ctx.beginPath()
+            ctx.moveTo(x1,y1)
+            ctx.lineTo(x2,y1)
+			ctx.lineTo(x2,y2)
+			ctx.lineTo(x1,y2)
+			ctx.lineTo(x1,y1)
+			ctx.stroke()
+            ctx.closePath()
+
+            x1 = 180
+            y1 = 155
+            let radio = 40
+            let anguloI = 0
+            let anguloF = Math.PI * 2
+
+			ctx.beginPath()
+			ctx.fillStyle = 'blue'
+			ctx.arc(x1,y1,radio,anguloI,anguloF)
+			ctx.stroke()
+			ctx.fill()
+            ctx.closePath()
+
+            x1 = 280
+
+			ctx.beginPath()
+			ctx.fillStyle = 'green'
+			ctx.arc(x1,y1,radio,anguloI,anguloF)
+			ctx.stroke()
+			ctx.fill()
+            ctx.closePath()
+
+            y1 = 245
+
+			ctx.beginPath()
+			ctx.fillStyle = 'yellow'
+			ctx.arc(x1,y1,radio,anguloI,anguloF)	
+			ctx.stroke()
+			ctx.fill()
+            ctx.closePath()
+            
+            x1 = 180
+
+			ctx.beginPath()
+			ctx.fillStyle = 'red'
+			ctx.arc(x1,y1,radio,anguloI,anguloF)	
+			ctx.stroke()
+			ctx.fill()
+            ctx.closePath()
+            
+            // Cuadrado 2
+
+            x1 = 380
+            x2 = 640
+            y1 = 100
+            y2 = 300
+
+            ctx.beginPath()
+            ctx.moveTo(x1,y1)
+            ctx.lineTo(x2,y1)
+			ctx.lineTo(x2,y2)
+			ctx.lineTo(x1,y2)
+			ctx.lineTo(x1,y1)
+			ctx.stroke()
+            ctx.closePath()
+
+            x1 = 510
+            y1 = 100
+            y2 = 300
+
+			ctx.beginPath()
+			ctx.strokeStyle = 'red'
+			ctx.moveTo(510,100)
+			ctx.lineTo(510,200)
+			ctx.stroke()
+			ctx.closePath()
+
+			ctx.beginPath()
+			ctx.moveTo(640,300)
+			ctx.lineTo(510,200)
+			ctx.stroke()
+			ctx.closePath()
+
+			ctx.beginPath()
+			ctx.moveTo(380,300)
+			ctx.lineTo(510,200)
+			ctx.stroke()
+			ctx.closePath()
+
+			// Cuadrado 3
+
+            x1 = 100
+            x2 = 100
+            y1 = 100
+            y2 = 100
+
+			ctx.beginPath()
+			ctx.strokeStyle = 'black'
+            ctx.moveTo(100,310)
+            ctx.lineTo(360,310)
+			ctx.lineTo(360,510)
+			ctx.lineTo(100,510)
+			ctx.lineTo(100,310)
+			ctx.stroke()
+            ctx.closePath()
+
+			ctx.beginPath()
+			ctx.fillStyle = 'purple'
+            ctx.moveTo(120,330)
+            ctx.lineTo(340,330)
+			ctx.lineTo(340,490)
+			ctx.lineTo(120,490)
+			ctx.lineTo(120,330)
+			ctx.stroke()
+			ctx.fill()
+            ctx.closePath()
+
+			ctx.beginPath()
+			ctx.fillStyle = 'white'
+			ctx.arc(230,410,40,0,Math.PI * 2)
+			ctx.stroke()
+			ctx.fill()
+			ctx.closePath()
+
+
+        </script>
+    </body>
+</html>
